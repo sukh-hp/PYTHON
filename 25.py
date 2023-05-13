@@ -1,0 +1,6 @@
+f = open('Sukh.txt', 'r+')
+print(f.read())
+f.write('It is added3\n')
+f.write('It is  again added4\n')
+print(f.read())
+f.close()
