@@ -4,7 +4,7 @@ def getdate():
 
 
 a = getdate()
-print(type(a))
+# print(type(a))
 
 
 def repeat():
@@ -67,31 +67,37 @@ def repeat():
     elif int(b) == 1 and int(c) == 2 and int(write_first) == 1:
         with open('Sukh-Food.txt', 'a') as f:
             g: str = input('What you have consumed today?')
+            f.write(a)
             f.write(g)  # type: ignore
             f.write('\n')
     elif int(b) == 1 and int(c) == 2 and int(write_first) == 2:
         with open('Sukh-ex.txt', 'a') as f:
             g: str = input('What you have done today?')
+            f.write(a)
             f.write(g)  # type: ignore
             f.write('\n')
     elif int(b) == 2 and int(c) == 2 and int(write_first) == 1:
         with open('Prabh-Food.txt', 'a') as f:
             g: str = input('What you have consumed today?')
+            f.write(a)
             f.write(g)  # type: ignore
             f.write('\n')
     elif int(b) == 2 and int(c) == 2 and int(write_first) == 2:
         with open('Prabh-ex.txt', 'a') as f:
             g: str = input('What you have done today?')
+            f.write(a)
             f.write(g)  # type: ignore
             f.write('\n')
     elif int(b) == 3 and int(c) == 2 and int(write_first) == 1:
         with open('Anshu-Food.txt', 'a') as f:
             g: str = input('What you have consumed today?')
+            f.write(a)
             f.write(g)  # type: ignore
             f.write('\n')
     elif int(b) == 3 and int(c) == 2 and int(write_first) == 2:
         with open('Anshu-ex.txt', 'a') as f:
             g: str = input('What you have done today?')
+            f.write(a)
             f.write(g)  # type: ignore
             f.write('\n')
     guess = input('Do you want more to read or Write?Y or N')

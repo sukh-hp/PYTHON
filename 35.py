@@ -6,10 +6,20 @@ list1 = ['Rock', 'Paper', 'Scissor']
 dic1 = {'R':'Rock', 'P':'Paper', 'S':'Scissor'}
 print('         Welcome To the Rock , Paper , Scissor Game !\n                Select One of the Below\n                     R for Rock\n                     P for Paper\n                     S for Scissor')
 
-
+com_wins = 0
+you_wins = 0
 com_points = 0
 you_points = 0
-while True:
+
+def wins():
+    if com_wins==0 and you_wins ==0:
+        None
+    else:
+        print(f'            Computer Wins ={com_wins} ')
+        print(f'              Your Wins ={you_wins} ')
+# print(wins())
+# 
+while com_points!=5 or you_points!=5:     
     while True:
         a = input('              What is Your Choice--->')
         if a.upper() == 'R':
@@ -44,15 +54,21 @@ while True:
     
     print('Computer choice              Your Choice             Points')
     print(f'{b[0]}                      {dic1[a.upper()]}                      {com_points}-{you_points}')
-    if com_points+you_points == 10:
+    while com_points==5 or you_points==5:
         if you_points>com_points:
-            print('             Congratulations !')
+            print('                      Congratulations !')
+            you_wins+=1
         else:
-            print('         Sorry !')
+            print('                    Sorry !')
+            com_wins+=1
+        com_points = 0
+        you_points = 0
+        wins()
         again_check = input('     Do You Want To Play One More Time? Y or N--->')
-        if again_check.upper() == 'Y':
-            com_points = 0
-            you_points = 0
+    if com_points!=5 or you_points!=5:
+        continue
+    else:
+        again_check = input('     Do You Want To Play One More Time? Y or N--->')
+        if again_check.upper()=='Y':
             continue
-        else:
-            break
+        break
